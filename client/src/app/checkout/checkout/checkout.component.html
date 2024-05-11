@@ -1,0 +1,19 @@
+
+<div class="container mt-5" >
+
+    <div class="container ">
+        <h2 >Click here to Confirm your order </h2>
+        <button  [disabled]="clicked" (click)="submitOrder();clicked=true;
+         " type="button"
+          class="btn btn-secondary btn-lg py-1 align-items btn btn-warning" >
+          Place Order
+        
+        </button>
+    </div>
+ 
+    <div class="container mt-5 py-3 mb-3 " *ngIf="orderId">
+        <h2 style="  align-items:normal;"> Thankyou for Shopping with us , Your order id is : {{orderId}}</h2>
+    </div>
+ 
+    
+</div>

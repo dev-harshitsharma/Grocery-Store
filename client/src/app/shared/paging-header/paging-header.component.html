@@ -1,0 +1,12 @@
+<header *ngIf="count && pageIndex && pageSize">
+    <span *ngIf="count > 0">Showing 
+        <strong>
+            {{(pageIndex -1) * pageSize + 1}} -
+            {{pageIndex * pageSize 
+                > count
+                ? count
+                : pageIndex * pageSize
+            }}
+        </strong> of <strong>{{count}}</strong> Results</span>
+        <span *ngIf="count === 0">There are <strong>0</strong> results for this filter</span>
+</header>

@@ -1,0 +1,20 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-left">Product Name</th>
+        <th class="text-center">Quantity</th>
+        <th class="text-right">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let order of orders">
+        <tr *ngFor="let orderitem of order.orderItems">
+          <td>{{ orderitem.productName }}</td>
+          <td class="text-center">{{ orderitem.quantity }}</td>
+          <td class="text-right">{{ orderitem.price }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
